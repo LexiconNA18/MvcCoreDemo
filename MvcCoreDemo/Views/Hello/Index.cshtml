@@ -1,0 +1,19 @@
+﻿@model MvcCoreDemo.Controllers.Person
+
+@{
+    ViewData["Title"] = "Hello";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Hello @Model.Name!</h2>
+
+@if (Model.Age != null)
+{
+    var tmp = Model.Age - 1;
+    <p>You don't look one day older than @tmp!</p>
+}
+else
+{
+    <p>You old hag!</p>
+}
